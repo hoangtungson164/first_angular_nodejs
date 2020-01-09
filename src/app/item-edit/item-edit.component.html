@@ -4,39 +4,26 @@
       <h2 class="form-signin-heading">Edit Item</h2>
   
       <div>
-        <label for="inputName" class="label-input">Name: </label>
+        <label for="inputName" class="label-input">Name</label>
         <input type="type" id="inputName" name="name" class="form-control"  placeholder="UserName" [(ngModel)] = "item.name" required autofocus>
-        <div class="alert alert-danger" role="alert" *ngIf="form.get('name').invalid && form.get('name').touched">
-          Invalid username!
-        </div>
       </div>
   
       <div>
-        <label for="inputEmail" class="label-input">Hobby: </label>
-        <input type="type" id="inputEmail" name = "hobby" class="form-control" placeholder="Hobby" [(ngModel)] = "item.hobby" required>
-        <div class="alert alert-danger" role="alert" *ngIf="form.get('hobby').invalid && form.get('hobby').touched">
-          Invalid hobby!
-        </div>
+        <label for="inputHobby" class="label-input">Hobby</label>
+        <input type="type" id="inputHobby" name="hobby" class="form-control"  placeholder="hobby" [(ngModel)] = "item.hobby" required autofocus>
       </div>
   
       <div>
         <label for="inputJob" class="label-input">Job: </label>
         <input type="type" id="inputJob" name = "job" class="form-control" placeholder="Job" [(ngModel)] = "item.job" required>
-        <div class="alert alert-danger" role="alert" *ngIf="form.get('job').invalid && form.get('job').touched">
-          Invalid job!
-        </div>
       </div>
   
       <div>
       <label for="inputCountry" class="label-input">Country: </label>
       <input type="type" id="inputCountry" name = "country" class="form-control" placeholder="Country" [(ngModel)] = "item.country" required>
-        <div class="alert alert-danger" role="alert" *ngIf="form.get('country').invalid && form.get('country').touched">
-          Invalid country!
-        </div>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="button" (click)="updateItem()">Edit new</button>
-      <div class="alert alert-danger" role="alert" *ngIf="displaySignUp">
-        {{isNotSignUp}}
+      <div>
+        <button class="btn btn-lg btn-primary btn-block" type="button" (click)="updateItem()">Edit new</button>
       </div>
     </form>
   

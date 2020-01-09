@@ -26,16 +26,16 @@ item: IItem;
   getItemById(id: number) {
     this.itemService.getItemById(id).subscribe(next => {
       this.item = next;
-      console.log(this.item)
-      console.log('success to get item ' + next.name);
+      console.log(this.item.id)
+      console.log('success to get item ' + this.item.name + next.hobby + next.country + next.job);
     }, error => {
       console.log('fail to get item');
     });
   }
 
   updateItem() {
-    this.itemService.createItem(this.item).subscribe(next => {
-      console.log('success to create new item');
+    this.itemService.updateItem(this.item).subscribe(next => {
+      console.log('success to update item');
       this.router.navigateByUrl('/items');
     }, error => {
       console.log('fail to create new item');

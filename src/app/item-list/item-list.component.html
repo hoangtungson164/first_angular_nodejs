@@ -13,11 +13,11 @@
     <tbody *ngFor="let item of items; let i = index">
       <tr>
         <th scope="row">{{i + 1}}</th>
-        <td><button style="border: none; color:none;" [routerLink]="['/items', item.id]">{{item.name}}</button></td>
+        <td><a [routerLink]="['/items', item.id]">{{item.name}}</a></td>
         <td>{{item.hobby}}</td>
         <td>{{item.job}}</td>
         <td>{{item.country}}</td>
-        <td><button class="btn-primary" [routerLink]="['/items', item.id, 'edit']">Edit</button> || <button class="btn-secondary" [routerLink]="['/items', item.id, 'delete']">Delete</button></td>
+        <td><button class="btn btn-outline-primary" [routerLink]="['/items', item.id, 'edit']">Edit</button> || <button class="btn btn-outline-secondary" [routerLink]="['/items', item.id, 'delete']">Delete</button></td>
       </tr>
     </tbody>
   </table>

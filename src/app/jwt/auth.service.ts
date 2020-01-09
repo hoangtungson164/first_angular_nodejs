@@ -17,6 +17,7 @@ export class AuthService {
 
   private loginUrl = apiUrl + '/login';
   private signupUrl = apiUrl + '/register';
+  private logoutUrl = apiUrl + '/logout'
 
   constructor(private http: HttpClient) {
   }
@@ -27,5 +28,9 @@ export class AuthService {
 
   signUp(info: SignUpInfo): Observable<string> {
     return this.http.post<string>(this.signupUrl, info, httpOptions);
+  }
+
+  signOut(): Observable<void> {
+    return this.http.get<void>(this.logoutUrl);
   }
 }

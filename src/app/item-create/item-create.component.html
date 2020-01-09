@@ -1,0 +1,43 @@
+<div class="container">
+
+    <form class="form-signin" [formGroup]="form">
+      <h2 class="form-signin-heading">Create New Item</h2>
+  
+      <div class="form-group">
+        <label for="inputName" class="label-input">Name: </label>
+        <input type="type" id="inputName" formControlName="name" name="name" class="form-control"  placeholder="UserName" required autofocus>
+        <div class="alert alert-danger" role="alert" *ngIf="form.get('name').invalid && form.get('name').touched">
+          Invalid username!
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="inputEmail" class="label-input">Hobby: </label>
+        <input type="type" id="inputEmail" formControlName="hobby" class="form-control" placeholder="Hobby" required>
+        <div class="alert alert-danger" role="alert" *ngIf="form.get('hobby').invalid && form.get('hobby').touched">
+          Invalid hobby!
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="inputPassword" class="label-input">Job: </label>
+        <input type="type" id="inputPassword" formControlName="job" class="form-control" placeholder="Job" required>
+        <div class="alert alert-danger" role="alert" *ngIf="form.get('job').invalid && form.get('job').touched">
+          Invalid job!
+        </div>
+      </div>
+  
+      <div class="form-group">
+      <label for="inputCPassword" class="label-input">Country: </label>
+      <input type="type" id="inputCPassword" formControlName="country" class="form-control" placeholder="Country" required>
+        <div class="alert alert-danger" role="alert" *ngIf="form.get('country').invalid && form.get('country').touched">
+          Invalid country!
+        </div>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="button" [disabled]="form.invalid" (click)="createItem()">Create new</button>
+      <div class="alert alert-danger" role="alert" *ngIf="displaySignUp">
+        {{isNotSignUp}}
+      </div>
+    </form>
+  
+  </div>

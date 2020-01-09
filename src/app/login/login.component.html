@@ -1,0 +1,36 @@
+<div class="container">
+    <form class="form-signin" [formGroup]="loginForm">
+  
+      <h2 class="form-signin-heading">Please sign in</h2>
+  
+      <div class="form-group row">
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="inputEmail" formControlName="email" class="form-control" placeholder="Email" required autofocus>
+        <div class="alert alert-danger" role="alert" *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
+          Invalid email!
+        </div>
+      </div>
+  
+  
+      <div class="form-group row">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" formControlName="password" class="form-control" placeholder="Password" required>
+        <div class="alert alert-danger" role="alert" *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched" >
+          Invalid password!
+        </div>
+      </div>
+  
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+  
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmit()" [disabled]="loginForm.invalid">Sign in</button>
+      <div class="alert alert-danger" role="alert" *ngIf="display">
+          {{isNotLogin}}
+      </div>
+  
+    </form>
+  
+  </div>

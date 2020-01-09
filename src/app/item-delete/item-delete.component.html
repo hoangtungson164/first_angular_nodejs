@@ -1,0 +1,22 @@
+<h3 style="text-align: center;">Item</h3>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Hobby</th>
+        <th scope="col">Job</th>
+        <th scope="col">Country</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="item">
+      <tr>
+        <th scope="row">#</th>
+        <td>{{item.name}}</td>
+        <td>{{item.hobby}}</td>
+        <td>{{item.job}}</td>
+        <td>{{item.country}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn-primary" (click) = "deleteItem()">Delete item</button>

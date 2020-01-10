@@ -1,46 +1,33 @@
+<app-login-taskbar></app-login-taskbar>
+
 <div class="container">
 
-    <form *ngIf="item">
-      <h2 class="form-signin-heading">Edit Item</h2>
-  
-      <div>
-        <label for="inputName" class="label-input">Name</label>
-        <input type="type" id="inputName" name="name" class="form-control"  placeholder="UserName" [(ngModel)] = "item.name" required minlength="3">
-        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-            <div *ngIf="name.errors.required"> Name is required. </div>
-            <div *ngIf="name.errors.minlength"> Name must be at least 3 characters long.</div>
-        </div>
-      </div>
-  
-      <div>
-        <label for="inputHobby" class="label-input">Hobby</label>
-        <input type="type" id="inputHobby" name="hobby" class="form-control"  placeholder="hobby" [(ngModel)] = "item.hobby" required minlength="3">
-        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-          <div *ngIf="name.errors.required"> Hobby is required. </div>
-          <div *ngIf="name.errors.minlength"> Hobby must be at least 3 characters long.</div>
-      </div>
-      </div>
-  
-      <div>
-        <label for="inputJob" class="label-input">Job: </label>
-        <input type="type" id="inputJob" name = "job" class="form-control" placeholder="Job" [(ngModel)] = "item.job" required minlength="3">
-        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-          <div *ngIf="name.errors.required"> Job is required. </div>
-          <div *ngIf="name.errors.minlength"> Job must be at least 3 characters long.</div>
-      </div>
-      </div>
-  
-      <div>
-      <label for="inputCountry" class="label-input">Country: </label>
-      <input type="type" id="inputCountry" name = "country" class="form-control" placeholder="Country" [(ngModel)] = "item.country" required minlength="3">
-      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-        <div *ngIf="name.errors.required"> Country is required. </div>
-        <div *ngIf="name.errors.minlength"> Country must be at least 3 characters long.</div>
+  <form *ngIf="item">
+    <h2 class="form-signin-heading">Edit Item</h2>
+
+    <div>
+      <label for="name" class="label-input">Name</label>
+      <input type="type" id="name" name="name" class="form-control" placeholder="UserName" [(ngModel)]="item.name">
     </div>
-      </div>
-      <div>
-        <button class="btn btn-lg btn-primary btn-block" type="button" (click)="updateItem()">Edit new</button>
-      </div>
-    </form>
-  
-  </div>
+
+    <div>
+      <label for="inputHobby" class="label-input">Hobby</label>
+      <input type="type" id="inputHobby" name="hobby" class="form-control" placeholder="hobby" [(ngModel)]="item.hobby">
+    </div>
+
+    <div>
+      <label for="inputJob" class="label-input">Job: </label>
+      <input type="type" id="inputJob" name="job" class="form-control" placeholder="Job" [(ngModel)]="item.job">
+    </div>
+
+    <div>
+      <label for="inputCountry" class="label-input">Country: </label>
+      <input type="type" id="inputCountry" name="country" class="form-control" placeholder="Country"
+        [(ngModel)]="item.country">
+    </div>
+    <div>
+      <button class="btn btn-lg btn-primary btn-block" type="button" (click)="updateItem()">Edit new</button>
+    </div>
+  </form>
+
+</div>

@@ -10,6 +10,8 @@ import { TokenStorageService } from 'src/app/jwt/token.service';
 })
 export class LoginTaskbarComponent implements OnInit {
 
+  checkToken: string;
+
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -17,12 +19,13 @@ export class LoginTaskbarComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    this.checkToken = this.tokenService.getToken();
   }
 
   logout(){
     this.authService.signOut().subscribe( next => {
       this.tokenService.signOut();
-      this.router.navigateByUrl("/login").then(s => {console.log('success to logout');})
+      this.router.navigateByUrl("/").then(s => {console.log('success to logout');})
     }, error => {
       console.log('fail to logout')
     })

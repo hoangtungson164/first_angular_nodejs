@@ -1,0 +1,6 @@
+projectKey=frontend
+serverUrl=http://1.55.215.214:9010
+serverVersion=7.9.1.27448
+dashboardUrl=http://1.55.215.214:9010/dashboard?id=frontend
+ceTaskId=AW-JsZVB5_80M-FfzX1w
+ceTaskUrl=http://1.55.215.214:9010/api/ce/task?id=AW-JsZVB5_80M-FfzX1w

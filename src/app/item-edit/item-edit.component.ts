@@ -27,7 +27,6 @@ item: IItem;
     this.itemService.getItemById(id).subscribe(next => {
       this.item = next;
       console.log(this.item.id)
-      console.log('success to get item ' + this.item.name + next.hobby + next.country + next.job);
     }, error => {
       console.log('fail to get item');
     });
